@@ -4,6 +4,7 @@ package Step_Def;
 import ConstantsPackage.Constants;
 import Utilities.CommonUtils;
 import WebDriverManagerPackage.DriverManager;
+import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -17,7 +18,7 @@ public class Common_Step_Definition {
     //Browser launch function
     //public static WebDriver driver;//declared in Driver manager class
 
-    public static final Logger LOGGER= LogManager.getLogger(Common_Step_Definition.class);
+    public static final Logger LOGGER = LogManager.getLogger(Common_Step_Definition.class);
 
 
     //We kept the property file under resource so we dont need to mention PropertyConfigurator.configure();
@@ -27,7 +28,7 @@ public class Common_Step_Definition {
         LOGGER.info("Execution started successfully");
         try {
             LOGGER.info("CommonUtil accessed");
-            CommonUtils commonUtils=new CommonUtils();
+            CommonUtils commonUtils = new CommonUtils();
             LOGGER.info("CProperty file loaded");
             commonUtils.loadProperties();
 
@@ -52,7 +53,9 @@ public class Common_Step_Definition {
         }
     }
 
-
-
+    @After
+    public void afterScenario() {
+        DriverManager.getDriver().quit();
+    }
 
 }

@@ -20,10 +20,11 @@ public class Verify_CEOname_Step_Def {
 
     @Given("User Logged in successfully on app")
     public void user_logged_in_successfully_on_app() {
+
         DriverManager.getDriver().get(Constants.APP_URL);
-        LoginPage.Username.sendKeys(Constants.USERNAME);
-        LoginPage.Password.sendKeys(Constants.PASSWORD);
-        LoginPage.Login_Button.click();
+        LoginPage.getInstance().getUsername().sendKeys(Constants.USERNAME);
+        LoginPage.getInstance().getPassword().sendKeys(Constants.PASSWORD);
+        LoginPage.getInstance().getLogin_Button().click();
 
         String currentURL = DriverManager.getDriver().getCurrentUrl();
         if (currentURL.contains("dashboard")) {
@@ -34,28 +35,30 @@ public class Verify_CEOname_Step_Def {
     @When("User click director option from Menu bar")
     public void user_click_director_option_from_menu_bar() {
 
-        DashBoardPage.DIRECTORY_TAB.click();
+        DashBoardPage.getInstance().getDIRECTORY_TAB().click();
         LOGGER.info("User click director option from Menu bar");
     }
 
     @When("the user select {string} from the dropdown")
     public void the_user_select_from_the_dropdown(String jobTitle) {
 
-        Select select=new Select(DirectoryPage.JOB_TITLE);
+        Select select = new Select(DirectoryPage.getInstance().getJOB_TITLE());
         select.selectByVisibleText(jobTitle);
-        LOGGER.info(select.getFirstSelectedOption()+"Job Title Selected from the dropdown");
+        LOGGER.info(select.getFirstSelectedOption() + "Job Title Selected from the dropdown");
     }
 
     @When("click the search button")
     public void click_the_search_button() {
-        DirectoryPage.SEARCH_BUTTON.click();
+
+        DirectoryPage.getInstance().getSEARCH_BUTTON().click();
         LOGGER.info("User clicked the search button");
     }
 
     @Then("user should see the CEO name {string}")
     public void user_should_see_the_ceo_name(String expectedName) {
-        String actualName=DirectoryPage.CEO_NAME.getText();
-        Assert.assertEquals(expectedName,actualName);
+
+        String actualName = DirectoryPage.getInstance().getCEO_NAME().getText();
+        Assert.assertEquals(expectedName, actualName);
         LOGGER.info("CEO Name fetched correctly");
     }
 }

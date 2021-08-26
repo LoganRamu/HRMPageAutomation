@@ -45,8 +45,8 @@ public class CommonUtils {
 
     public void initElements()
     {
-        PageFactory.initElements(DriverManager.getDriver(), LoginPage.class);
-        PageFactory.initElements(DriverManager.getDriver(), DashBoardPage.class);
-        PageFactory.initElements(DriverManager.getDriver(), DirectoryPage.class);
+        PageFactory.initElements(DriverManager.getDriver(), LoginPage.getInstance());
+        PageFactory.initElements(DriverManager.getDriver(), DashBoardPage.getInstance());
+        PageFactory.initElements(DriverManager.getDriver(), DirectoryPage.getInstance());
     }
 }

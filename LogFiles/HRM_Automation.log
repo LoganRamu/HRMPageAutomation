@@ -116,3 +116,39 @@
 2021-08-26 11:49:05,688 [INFO ] Step_Def.Common_Step_Definition [main] CommonUtil accessed
 2021-08-26 11:49:05,688 [INFO ] Step_Def.Common_Step_Definition [main] CProperty file loaded
 2021-08-26 11:49:05,760 [INFO ] Step_Def.Common_Step_Definition [main] Checking driver null not not
+2021-08-26 22:10:14,632 [INFO ] Step_Def.Common_Step_Definition [main] Execution started successfully
+2021-08-26 22:10:14,664 [INFO ] Step_Def.Common_Step_Definition [main] CommonUtil accessed
+2021-08-26 22:10:14,695 [INFO ] Step_Def.Common_Step_Definition [main] CProperty file loaded
+2021-08-26 22:10:14,726 [INFO ] Step_Def.Common_Step_Definition [main] Checking driver null not not
+2021-08-26 22:10:14,757 [INFO ] Step_Def.Common_Step_Definition [main] Driver NUll, Initiating driver
+2021-08-26 22:10:14,757 [INFO ] WebDriverManagerPackage.DriverManager [main] Launching--chrome
+2021-08-26 22:11:20,856 [INFO ] Step_Def.Common_Step_Definition [main] Execution started successfully
+2021-08-26 22:11:20,856 [INFO ] Step_Def.Common_Step_Definition [main] CommonUtil accessed
+2021-08-26 22:11:20,856 [INFO ] Step_Def.Common_Step_Definition [main] CProperty file loaded
+2021-08-26 22:11:20,871 [INFO ] Step_Def.Common_Step_Definition [main] Checking driver null not not
+2021-08-26 22:20:16,728 [INFO ] Step_Def.Common_Step_Definition [main] Execution started successfully
+2021-08-26 22:20:16,743 [INFO ] Step_Def.Common_Step_Definition [main] CommonUtil accessed
+2021-08-26 22:20:16,743 [INFO ] Step_Def.Common_Step_Definition [main] CProperty file loaded
+2021-08-26 22:20:16,743 [INFO ] Step_Def.Common_Step_Definition [main] Checking driver null not not
+2021-08-26 22:20:16,759 [INFO ] Step_Def.Common_Step_Definition [main] Driver NUll, Initiating driver
+2021-08-26 22:20:16,759 [INFO ] WebDriverManagerPackage.DriverManager [main] Launching--chrome
+2021-08-26 22:20:42,279 [INFO ] Step_Def.Verify_CEOname_Step_Def [main] Successfully Login
+2021-08-26 22:20:43,178 [INFO ] Step_Def.Common_Step_Definition [main] Execution started successfully
+2021-08-26 22:20:43,178 [INFO ] Step_Def.Common_Step_Definition [main] CommonUtil accessed
+2021-08-26 22:20:43,178 [INFO ] Step_Def.Common_Step_Definition [main] CProperty file loaded
+2021-08-26 22:20:43,194 [INFO ] Step_Def.Common_Step_Definition [main] Checking driver null not not
+2021-08-26 22:26:57,698 [INFO ] Step_Def.Common_Step_Definition [main] Execution started successfully
+2021-08-26 22:26:57,713 [INFO ] Step_Def.Common_Step_Definition [main] CommonUtil accessed
+2021-08-26 22:26:57,713 [INFO ] Step_Def.Common_Step_Definition [main] CProperty file loaded
+2021-08-26 22:26:57,713 [INFO ] Step_Def.Common_Step_Definition [main] Checking driver null not not
+2021-08-26 22:26:57,713 [INFO ] Step_Def.Common_Step_Definition [main] Driver NUll, Initiating driver
+2021-08-26 22:26:57,729 [INFO ] WebDriverManagerPackage.DriverManager [main] Launching--chrome
+2021-08-26 22:27:44,129 [INFO ] Step_Def.Verify_CEOname_Step_Def [main] Successfully Login
+2021-08-26 22:27:53,452 [INFO ] Step_Def.Verify_CEOname_Step_Def [main] User click director option from Menu bar
+2021-08-26 22:27:54,262 [INFO ] Step_Def.Verify_CEOname_Step_Def [main] [[[[ChromeDriver: chrome on WINDOWS (9bb451535fd7aa009e7106bdde86851d)] -> xpath: //label[contains(text(),'Job')]//following-sibling::*]] -> tag name: option]Job Title Selected from the dropdown
+2021-08-26 22:27:56,208 [INFO ] Step_Def.Verify_CEOname_Step_Def [main] User clicked the search button
+2021-08-26 22:27:56,444 [INFO ] Step_Def.Verify_CEOname_Step_Def [main] CEO Name fetched correctly
+2021-08-26 22:27:57,795 [INFO ] Step_Def.Common_Step_Definition [main] Execution started successfully
+2021-08-26 22:27:57,795 [INFO ] Step_Def.Common_Step_Definition [main] CommonUtil accessed
+2021-08-26 22:27:57,795 [INFO ] Step_Def.Common_Step_Definition [main] CProperty file loaded
+2021-08-26 22:27:57,795 [INFO ] Step_Def.Common_Step_Definition [main] Checking driver null not not
