@@ -20,7 +20,7 @@ public class DirectoryPage
         return directoryPageInstance;
     }
 
-    @FindBy(xpath = "//label[contains(text(),'Job')]//following-sibling::*")
+    @FindBy(xpath = "//label[contains(text(),'Job')following-sibling::*")
     private WebElement JOB_TITLE;
 
     @FindBy(xpath = "//p//following-sibling::input[@type='submit']")

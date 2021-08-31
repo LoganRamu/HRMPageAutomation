@@ -6,6 +6,7 @@ import Utilities.CommonUtils;
 import WebDriverManagerPackage.DriverManager;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
+import io.cucumber.java.Scenario;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
@@ -18,6 +19,12 @@ public class Common_Step_Definition {
     //Browser launch function
     //public static WebDriver driver;//declared in Driver manager class
 
+    public static String scenarioName=null;
+
+    public static String getScenarioName() {
+        return scenarioName;
+    }
+
     public static final Logger LOGGER = LogManager.getLogger(Common_Step_Definition.class);
 
 
@@ -28,9 +35,8 @@ public class Common_Step_Definition {
         LOGGER.info("Execution started successfully");
         try {
             LOGGER.info("CommonUtil accessed");
-            CommonUtils commonUtils = new CommonUtils();
             LOGGER.info("CProperty file loaded");
-            commonUtils.loadProperties();
+            CommonUtils.getInstance().loadProperties();
 
             LOGGER.info("Checking driver null not not");
             //Below will good when we have browser stuffs in the same class
@@ -45,7 +51,7 @@ public class Common_Step_Definition {
                 //it will check whether the driver is null, if yes it will start the driver
                 LOGGER.info("Driver NUll, Initiating driver");
                 DriverManager.launchBrowser();
-                commonUtils.initElements();
+                CommonUtils.getInstance().initElements();
             }
 
         } catch (Exception e) {
@@ -54,8 +60,12 @@ public class Common_Step_Definition {
     }
 
     @After
-    public void afterScenario() {
-        DriverManager.getDriver().quit();
+    public void afterScenario(Scenario scenario) {
+        scenarioName=scenario.getName();
+        if(scenario.isFailed()) {
+            CommonUtils.getInstance().takeScreenShot();
+        }
+        //DriverManager.getDriver().quit();
     }
 
 }

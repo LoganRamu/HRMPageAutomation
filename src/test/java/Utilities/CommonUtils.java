@@ -4,15 +4,38 @@ import ConstantsPackage.Constants;
 import PageObjects.DashBoardPage;
 import PageObjects.DirectoryPage;
 import PageObjects.LoginPage;
+import Step_Def.Common_Step_Definition;
 import WebDriverManagerPackage.DriverManager;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.io.FileHandler;
 import org.openqa.selenium.support.PageFactory;
 
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.util.Properties;
 
 public class CommonUtils {
+
+    private static CommonUtils commonUtilsInstance;
+
+    public static final Logger LOGGER= LogManager.getLogger(CommonUtils.class);
+
+    private CommonUtils(){
+
+    }
+    public static CommonUtils getInstance()
+    {
+        if(commonUtilsInstance==null)
+        {
+            commonUtilsInstance=new CommonUtils();
+        }
+        return commonUtilsInstance;
+    }
 
     public void loadProperties() {
         // below approach for config.properties available in project
@@ -48,5 +71,21 @@ public class CommonUtils {
         PageFactory.initElements(DriverManager.getDriver(), LoginPage.getInstance());
         PageFactory.initElements(DriverManager.getDriver(), DashBoardPage.getInstance());
         PageFactory.initElements(DriverManager.getDriver(), DirectoryPage.getInstance());
+    }
+
+    public void takeScreenShot()
+    {
+        try
+        {
+            TakesScreenshot takesScreenshot= (TakesScreenshot) DriverManager.getDriver();
+            File screenShot = takesScreenshot.getScreenshotAs(OutputType.FILE);
+            File file=new File(Common_Step_Definition.getScenarioName()+".png");
+            FileHandler.copy(screenShot,file);
+        }
+        catch (Exception e)
+        {
+            LOGGER.error(e);
+        }
+
     }
 }
