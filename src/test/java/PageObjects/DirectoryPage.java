@@ -20,7 +20,8 @@ public class DirectoryPage
         return directoryPageInstance;
     }
 
-    @FindBy(xpath = "//label[contains(text(),'Job')following-sibling::*")
+    @FindBy(css = "[id=searchDirectory_job_title]")
+    //div[@class='inner']//following-sibling::select[@id='searchDirectory_job_title']
     private WebElement JOB_TITLE;
 
     @FindBy(xpath = "//p//following-sibling::input[@type='submit']")
@@ -28,6 +29,9 @@ public class DirectoryPage
 
     @FindBy(xpath = "//li/b")
     private WebElement CEO_NAME;
+
+    @FindBy(xpath="//b[text()='Dashboard']")
+    private WebElement DASHBOARD_TAB;
 
     public WebElement getJOB_TITLE() {
         return JOB_TITLE;
@@ -39,5 +43,9 @@ public class DirectoryPage
 
     public WebElement getCEO_NAME() {
         return CEO_NAME;
+    }
+
+    public WebElement getDASHBOARD_TAB() {
+        return DASHBOARD_TAB;
     }
 }

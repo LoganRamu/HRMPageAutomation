@@ -4,6 +4,7 @@ import ConstantsPackage.Constants;
 import PageObjects.DashBoardPage;
 import PageObjects.DirectoryPage;
 import PageObjects.LoginPage;
+import PageObjects.TimePage;
 import Step_Def.Common_Step_Definition;
 import WebDriverManagerPackage.DriverManager;
 import org.apache.logging.log4j.LogManager;
@@ -71,6 +72,7 @@ public class CommonUtils {
         PageFactory.initElements(DriverManager.getDriver(), LoginPage.getInstance());
         PageFactory.initElements(DriverManager.getDriver(), DashBoardPage.getInstance());
         PageFactory.initElements(DriverManager.getDriver(), DirectoryPage.getInstance());
+        PageFactory.initElements(DriverManager.getDriver(), TimePage.getInstance());
     }
 
     public void takeScreenShot()

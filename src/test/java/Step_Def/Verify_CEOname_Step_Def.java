@@ -21,37 +21,56 @@ public class Verify_CEOname_Step_Def {
     @Given("User Logged in successfully on app")
     public void user_logged_in_successfully_on_app() {
 
-        DriverManager.getDriver().get(Constants.APP_URL);
-        LoginPage.getInstance().getUsername().sendKeys(Constants.USERNAME);
-        LoginPage.getInstance().getPassword().sendKeys(Constants.PASSWORD);
-        LoginPage.getInstance().getLogin_Button().click();
+        try {
 
-        String currentURL = DriverManager.getDriver().getCurrentUrl();
-        if (currentURL.contains("dashboard")) {
-            LOGGER.info("Successfully Login");
+
+            DriverManager.getDriver().get(Constants.APP_URL);
+            LoginPage.getInstance().getUsername().sendKeys(Constants.USERNAME);
+            LoginPage.getInstance().getPassword().sendKeys(Constants.PASSWORD);
+            LoginPage.getInstance().getLogin_Button().click();
+
+            String currentURL = DriverManager.getDriver().getCurrentUrl();
+            if (currentURL.contains("dashboard")) {
+                LOGGER.info("Successfully Login");
+            }
+        } catch (Exception e) {
+            LOGGER.error(e);
         }
     }
 
     @When("User click director option from Menu bar")
     public void user_click_director_option_from_menu_bar() {
 
-        DashBoardPage.getInstance().getDIRECTORY_TAB().click();
-        LOGGER.info("User click director option from Menu bar");
+        try {
+            DashBoardPage.getInstance().getDIRECTORY_TAB().click();
+            LOGGER.info("User click director option from Menu bar");
+        } catch (Exception e) {
+            LOGGER.error(e);
+        }
     }
 
     @When("the user select {string} from the dropdown")
     public void the_user_select_from_the_dropdown(String jobTitle) {
 
-        Select select = new Select(DirectoryPage.getInstance().getJOB_TITLE());
-        select.selectByVisibleText(jobTitle);
-        LOGGER.info(select.getFirstSelectedOption() + "Job Title Selected from the dropdown");
+        try {
+            Select select = new Select(DirectoryPage.getInstance().getJOB_TITLE());
+            select.selectByVisibleText(jobTitle);
+            LOGGER.info(select.getFirstSelectedOption() + "Job Title Selected from the dropdown");
+        } catch (Exception e) {
+            LOGGER.error(e);
+        }
     }
-
     @When("click the search button")
     public void click_the_search_button() {
 
-        DirectoryPage.getInstance().getSEARCH_BUTTON().click();
-        LOGGER.info("User clicked the search button");
+        try {
+            DirectoryPage.getInstance().getSEARCH_BUTTON().click();
+            LOGGER.info("User clicked the search button");
+
+        } catch (Exception e) {
+            LOGGER.error(e);
+            Assert.fail(e.getMessage());
+        }
     }
 
     @Then("user should see the CEO name {string}")
@@ -59,6 +78,13 @@ public class Verify_CEOname_Step_Def {
 
         String actualName = DirectoryPage.getInstance().getCEO_NAME().getText();
         Assert.assertEquals(expectedName, actualName);
-        LOGGER.info("CEO Name fetched correctly");
+        /*try {
+            String actualName = DirectoryPage.getInstance().getCEO_NAME().getText();
+            Assert.assertEquals(expectedName, actualName);
+            LOGGER.info("CEO Name fetched correctly");
+        } catch (Exception e) {
+            LOGGER.error(e);
+            Assert.fail(e.getMessage());
+        }*/
     }
 }

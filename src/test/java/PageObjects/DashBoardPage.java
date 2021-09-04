@@ -22,9 +22,18 @@ public class DashBoardPage
     }
 
     @FindBy(linkText="Directory")
-private WebElement DIRECTORY_TAB;
+    private WebElement DIRECTORY_TAB;
+
+    @FindBy(xpath="//a//span[text()='Timesheets']")
+    private WebElement TIME_SHEET_OPTION;
+
 
     public WebElement getDIRECTORY_TAB() {
         return DIRECTORY_TAB;
+    }
+
+    public WebElement getTIME_SHEET_OPTION()
+    {
+        return TIME_SHEET_OPTION;
     }
 }
