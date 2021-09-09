@@ -2,6 +2,7 @@ package Step_Def;
 
 
 import ConstantsPackage.Constants;
+import PageObjects.LoginPage;
 import Utilities.CommonUtils;
 import WebDriverManagerPackage.DriverManager;
 import io.cucumber.java.After;
@@ -46,17 +47,25 @@ public class Common_Step_Definition {
                 DriverManager.launchBrowser();
             }*/
 
-
             if (DriverManager.getDriver() == null) {//if this line is not available two driver will open
                 //it will check whether the driver is null, if yes it will start the driver
                 LOGGER.info("Driver NUll, Initiating driver");
                 DriverManager.launchBrowser();
                 CommonUtils.getInstance().initElements();
+                loginPage();
             }
 
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    private void loginPage()
+    {
+        DriverManager.getDriver().get(Constants.APP_URL);
+        LoginPage.getInstance().getUsername().sendKeys(Constants.USERNAME);
+        LoginPage.getInstance().getPassword().sendKeys(Constants.PASSWORD);
+        LoginPage.getInstance().getLogin_Button().click();
     }
 
     @After

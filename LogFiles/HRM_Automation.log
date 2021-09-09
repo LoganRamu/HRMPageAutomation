@@ -1,27 +1,31 @@
-2021-09-04 00:00:07,830 [INFO ] Step_Def.Common_Step_Definition [main] Execution started successfully
-2021-09-04 00:00:08,034 [INFO ] Step_Def.Common_Step_Definition [main] CommonUtil accessed
-2021-09-04 00:00:08,034 [INFO ] Step_Def.Common_Step_Definition [main] CProperty file loaded
-2021-09-04 00:00:08,096 [INFO ] Step_Def.Common_Step_Definition [main] Checking driver null not not
-2021-09-04 00:00:08,112 [INFO ] Step_Def.Common_Step_Definition [main] Driver NUll, Initiating driver
-2021-09-04 00:00:08,112 [INFO ] WebDriverManagerPackage.DriverManager [main] Launching--chrome
-2021-09-04 00:00:40,447 [INFO ] Step_Def.Verify_CEOname_Step_Def [main] Successfully Login
-2021-09-04 00:00:45,582 [INFO ] Step_Def.Verify_CEOname_Step_Def [main] User click director option from Menu bar
-2021-09-04 00:00:46,294 [INFO ] Step_Def.Verify_CEOname_Step_Def [main] [[[[ChromeDriver: chrome on WINDOWS (2f1136b56c59201be71fe34912551d64)] -> css selector: [id=searchDirectory_job_title]]] -> tag name: option]Job Title Selected from the dropdown
-2021-09-04 00:00:47,740 [INFO ] Step_Def.Verify_CEOname_Step_Def [main] User clicked the search button
-2021-09-04 00:00:48,542 [INFO ] Step_Def.Common_Step_Definition [main] Execution started successfully
-2021-09-04 00:00:48,542 [INFO ] Step_Def.Common_Step_Definition [main] CommonUtil accessed
-2021-09-04 00:00:48,543 [INFO ] Step_Def.Common_Step_Definition [main] CProperty file loaded
-2021-09-04 00:00:48,545 [INFO ] Step_Def.Common_Step_Definition [main] Checking driver null not not
-2021-09-04 00:00:49,801 [INFO ] Step_Def.Verify_Pending_Timesheets_Step_def [main] User navigated to Home page
-2021-09-04 00:00:51,100 [INFO ] Step_Def.Verify_Pending_Timesheets_Step_def [main] User is on Time page
-2021-09-04 00:00:51,327 [INFO ] Step_Def.Verify_Pending_Timesheets_Step_def [main] User Enters employee name
-2021-09-04 00:00:51,473 [INFO ] Step_Def.Verify_Pending_Timesheets_Step_def [main] user clicks on view button
-2021-09-04 00:00:51,588 [ERROR] Step_Def.Verify_Pending_Timesheets_Step_def [main] org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@class='message warning']"}
+2021-09-07 15:35:29,741 [INFO ] Step_Def.Common_Step_Definition [main] Execution started successfully
+2021-09-07 15:35:29,882 [INFO ] Step_Def.Common_Step_Definition [main] CommonUtil accessed
+2021-09-07 15:35:29,882 [INFO ] Step_Def.Common_Step_Definition [main] CProperty file loaded
+2021-09-07 15:35:29,913 [INFO ] Step_Def.Common_Step_Definition [main] Checking driver null not not
+2021-09-07 15:35:29,913 [INFO ] Step_Def.Common_Step_Definition [main] Driver NUll, Initiating driver
+2021-09-07 15:35:29,913 [INFO ] WebDriverManagerPackage.DriverManager [main] Launching--chrome
+2021-09-07 15:35:53,897 [INFO ] Step_Def.Verify_CEOname_Step_Def [main] Successfully Login
+2021-09-07 15:36:01,938 [INFO ] Step_Def.Verify_CEOname_Step_Def [main] User click director option from Menu bar
+2021-09-07 15:36:02,175 [ERROR] Step_Def.Verify_CEOname_Step_Def [main] org.openqa.selenium.NoSuchElementException: Cannot locate element with text: Chief Executive Officer
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-0FGQ3OQ', ip: '192.168.1.5', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12.0.1'
+Driver info: driver.version: unknown
+2021-09-07 15:36:06,696 [INFO ] Step_Def.Verify_CEOname_Step_Def [main] User clicked the search button
+2021-09-07 15:36:07,061 [INFO ] Step_Def.Common_Step_Definition [main] Execution started successfully
+2021-09-07 15:36:07,063 [INFO ] Step_Def.Common_Step_Definition [main] CommonUtil accessed
+2021-09-07 15:36:07,064 [INFO ] Step_Def.Common_Step_Definition [main] CProperty file loaded
+2021-09-07 15:36:07,066 [INFO ] Step_Def.Common_Step_Definition [main] Checking driver null not not
+2021-09-07 15:36:08,889 [INFO ] Step_Def.Verify_Pending_Timesheets_Step_def [main] User navigated to Home page
+2021-09-07 15:36:11,735 [INFO ] Step_Def.Verify_Pending_Timesheets_Step_def [main] User is on Time page
+2021-09-07 15:36:11,914 [INFO ] Step_Def.Verify_Pending_Timesheets_Step_def [main] User Enters employee name
+2021-09-07 15:36:12,035 [INFO ] Step_Def.Verify_Pending_Timesheets_Step_def [main] user clicks on view button
+2021-09-07 15:36:12,091 [ERROR] Step_Def.Verify_Pending_Timesheets_Step_def [main] org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@class='message warning']"}
   (Session info: chrome=92.0.4515.159)
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'DESKTOP-0FGQ3OQ', ip: '192.168.1.5', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12.0.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 91.0.4472.101 (af52a90bf870..., userDataDir: C:\Users\Admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:55290}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 2f1136b56c59201be71fe34912551d64
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 91.0.4472.101 (af52a90bf870..., userDataDir: C:\Users\Admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:55342}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 7b3c7d413a74e49f82675b9ca2b37169
 *** Element info: {Using=xpath, value=//div[@class='message warning']}

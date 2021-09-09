@@ -22,13 +22,6 @@ public class Verify_CEOname_Step_Def {
     public void user_logged_in_successfully_on_app() {
 
         try {
-
-
-            DriverManager.getDriver().get(Constants.APP_URL);
-            LoginPage.getInstance().getUsername().sendKeys(Constants.USERNAME);
-            LoginPage.getInstance().getPassword().sendKeys(Constants.PASSWORD);
-            LoginPage.getInstance().getLogin_Button().click();
-
             String currentURL = DriverManager.getDriver().getCurrentUrl();
             if (currentURL.contains("dashboard")) {
                 LOGGER.info("Successfully Login");
